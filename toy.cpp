@@ -69,6 +69,21 @@ static int gettok() {
       return gettok();
   }
 
+  if (LastChar == '/') {
+    // Comment with // until end of line.
+    LastChar = getchar();
+    if (LastChar == '/') {
+      do
+        LastChar = getchar();
+      while (LastChar != EOF && LastChar != '\n' && LastChar != '\r');
+      if (LastChar != EOF)
+        return gettok();
+    } else {
+      // Division is not yet implemented, but still return '/'
+      return '/';
+    }
+  }
+
   // Check for end of file.  Don't eat the EOF.
   if (LastChar == EOF)
     return tok_eof;

@@ -8,7 +8,7 @@ An extended implementation of the [LLVM Kaleidoscope Tutorial](https://llvm.org/
 
 In addition to the core Kaleidoscope feature set, this implementation includes:
 
-- **[Planned] Comments:** Support for C-style single-line comments (`//`).
+- **Comments:** Support for C-style single-line comments (`//`).
 - **[Planned] Extended Arithmetic:** Support for modulo (`%`) and exponentiation (`^`) with right-associativity.
 
 ---
